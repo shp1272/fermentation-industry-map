@@ -1,39 +1,40 @@
 [
   {
-    "id": "sample-001",
-    "name": "示例数据·中试服务样例",
+    "id": "20260929-001",
+    "name": "四川厌氧生物科技有限责任公司",
+    "city": "成都",
+    "service_tags": ["中试", "发酵"],
+    "public_capability": "官网公开的一站式CMC开发服务：已投入使用超600㎡工艺研发场地及近1000㎡中试生产场地，配备发酵、冻干、制剂处方工艺开发等设备，可为药品研制阶段的工艺开发提供符合法规要求的质量分析服务；拥有超30人工艺研发团队，博硕学历占60%，主要技术骨干曾就职于国内大中型药企或研发机构；有20余个品种开发经验，均获得临床批件或生产批件。",
+    "price_status": "not found",
+    "contact_url": "http://www.scyysw.cn/cooperate/",
+    "source_url": "http://www.scyysw.cn/optimization/25350.html",
+    "checked_at": "2026-09-29",
+    "confidence": "high",
+    "status": "pending"
+  },
+  {
+    "id": "20260929-002",
+    "name": "微康益生菌（苏州）股份有限公司",
     "city": "苏州",
-    "service_tags": ["中试"],
-    "public_capability": "本卡片为页面演示用的示例数据，内容为虚构，不代表任何真实企业。正式录入后，此处将展示企业官网公开的能力描述，例如可承接的发酵规模、设备配置或服务范围。",
+    "service_tags": ["代工", "菌种"],
+    "public_capability": "官网公开：立足微生物组学，为食品、乳制品、保健食品、精准医学、日化用品、农业微生态等领域提供高活性益生菌菌种（含发酵食品菌种）及应用解决方案；在苏州、漯河、武汉设有三大益生菌研究院和五大智能制造工厂（苏州一厂、二厂、三厂，漯河一厂、二厂）；WecPro®Formula 系列按调节肠道菌群平衡、提高免疫力、口腔健康、体重管理、女性私护等方向，面向儿童、女性、中老年等人群量身定制益生菌制剂。",
     "price_status": "not found",
-    "source_url": "https://example.com/sample-001",
+    "contact_url": "https://www.wecare-bio.com/contact",
+    "source_url": "https://www.wecare-bio.com/",
     "checked_at": "2026-09-29",
-    "confidence": "low",
-    "status": "sample"
+    "confidence": "high",
+    "status": "pending"
   },
   {
-    "id": "sample-002",
-    "name": "示例数据·代工服务样例",
-    "city": "大连",
-    "service_tags": ["代工"],
-    "public_capability": "本卡片为页面演示用的示例数据，内容为虚构，不代表任何真实企业。正式录入后，此处将展示企业官网公开的代工能力描述，例如可代工的产品类型或生产资质。",
-    "price_status": "quote required",
-    "contact_url": "https://example.com/sample-002/contact",
-    "source_url": "https://example.com/sample-002",
-    "checked_at": "2026-09-29",
-    "confidence": "low",
-    "status": "sample"
-  },
-  {
-    "id": "sample-003",
-    "name": "示例数据·检测服务样例",
-    "city": "上海",
+    "id": "20260929-003",
+    "name": "谱尼测试集团股份有限公司",
+    "city": "北京",
     "service_tags": ["检测"],
-    "public_capability": "本卡片为页面演示用的示例数据，内容为虚构，不代表任何真实企业。正式录入后，此处将展示企业官网公开的检测能力描述，例如检测项目清单或资质认证。",
+    "public_capability": "官网公开：专注于保健食品全流程检测的技术服务机构，持有CMA、CNAS资质，具备食品复检机构资质，多地实验室为特殊食品验证评价技术机构。可提供安全性、保健功能、人群食用评价、功效成分、卫生学、稳定性等试验报告及违禁药物检测，卫生学指标覆盖菌落总数、大肠菌群、沙门氏菌、志贺氏菌、金黄色葡萄球菌等；另提供标签审核、方法学验证、理化指标检测、毒理安全性试验、功能学动物试验与人体试食试验，并为保健食品生产企业提供二方审核。",
     "price_status": "not found",
-    "source_url": "https://example.com/sample-003",
+    "source_url": "https://www.ponytest.com/classTesting?id=152",
     "checked_at": "2026-09-29",
-    "confidence": "low",
-    "status": "sample"
+    "confidence": "high",
+    "status": "pending"
   }
 ]

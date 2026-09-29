@@ -16,6 +16,7 @@
   };
   var CONF_LABELS = { "high": "可信度高", "medium": "可信度中", "low": "可信度低" };
   var CONF_CLASS = { "high": "conf-high", "medium": "conf-medium", "low": "conf-low" };
+  var STATUS_LABELS = { "pending": "待核验", "verified": "已核验" };
 
   var companies = [];
   var activeTag = null;
@@ -86,6 +87,9 @@
     if (card.confidence && CONF_LABELS[card.confidence]) {
       html += '<span class="badge ' + (CONF_CLASS[card.confidence] || "conf-low") + '">' + CONF_LABELS[card.confidence] + "</span>";
     }
+    if (!isSample && card.status && STATUS_LABELS[card.status]) {
+      html += '<span class="badge ' + (card.status === "verified" ? "conf-high" : "conf-medium") + '">' + STATUS_LABELS[card.status] + "</span>";
+    }
     html += '<span class="src-link"><a href="' + esc(card.source_url) + '" target="_blank" rel="noopener noreferrer">信息来源 ↗</a></span>';
     if (card.contact_url) {
       html += '<span class="src-link"><a href="' + esc(card.contact_url) + '" target="_blank" rel="noopener noreferrer">官网联系页 ↗</a></span>';
@@ -128,6 +132,11 @@
       .then(function (data) {
         if (!Array.isArray(data)) throw new Error("数据格式不是数组");
         companies = data;
+        var sampleCount = data.filter(function (c) { return c.status === "sample"; }).length;
+        if (sampleCount > 0) {
+          var bannerEl = document.getElementById("dataBanner");
+          bannerEl.innerHTML = "<div><strong>目录内有 " + sampleCount + " 条示例数据</strong>示例数据为演示用虚构卡片，不代表真实企业；其余为官网公开信息，每条均可点开来源核对。</div>";
+        }
         renderTagRow();
         renderList();
       })
