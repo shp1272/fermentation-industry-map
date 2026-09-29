@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发酵产业公开信息地图</title>
+<meta name="description" content="整理国内发酵相关中试、代工、检测服务的公开信息，附基础发酵计算器。本站只整理公开信息，不做供应商背书。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%232F5D44' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%236B8A74' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%23C97F2D'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" aria-label="主导航">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="13.5" fill="none" stroke="#2F5D44" stroke-width="1.8"/>
+        <circle cx="16" cy="16" r="8" fill="none" stroke="#6B8A74" stroke-width="1.8"/>
+        <circle cx="16" cy="16" r="3.6" fill="#C97F2D"/>
+      </svg>
+      <span class="brand-name">发酵产业公开信息地图</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">首页</a>
+      <a href="directory.html">企业目录</a>
+      <a href="calculator.html">发酵计算器</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <svg class="hero-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="14" fill="none" stroke="#2F5D44" stroke-width="1"/>
+      <circle cx="16" cy="16" r="9.5" fill="none" stroke="#2F5D44" stroke-width="1"/>
+      <circle cx="16" cy="16" r="5" fill="none" stroke="#2F5D44" stroke-width="1"/>
+      <circle cx="16" cy="16" r="2" fill="#2F5D44"/>
+    </svg>
+    <h1>一张只整理公开信息的<br>发酵产业地图</h1>
+    <p>面向发酵行业从业者：把散落在企业官网、官方名录里的中试、代工、检测服务信息，整理成可检索、可核验的目录。每一条都标出来源链接和核验日期。</p>
+    <p class="hero-note">当前为第一版：目录内为示例数据，等真实公开信息录入后替换。</p>
+    <div class="hero-chips">
+      <span class="chip accent">纯静态 · 无后端</span>
+      <span class="chip">只收录公开信息</span>
+      <span class="chip">不收集用户数据</span>
+      <span class="chip">不做撮合 · 不收费</span>
+    </div>
+  </section>
+
+  <div class="entry-grid">
+    <a class="entry-card" href="directory.html">
+      <div class="entry-title">企业目录 <span>3 条示例</span></div>
+      <div class="entry-desc">按关键词和服务标签（中试 / 代工 / 检测）筛选。每张企业卡带来源链接与核验日期，空字段不展示。</div>
+    </a>
+    <a class="entry-card" href="calculator.html">
+      <div class="entry-title">发酵计算器 <span>3 个功能</span></div>
+      <div class="entry-desc">接种量、稀释、配液三个基础计算，输入带单位，出错会提示。结果仅供参考，请自行复核。</div>
+    </a>
+  </div>
+
+  <h2 class="section-title">这张地图是什么，不是什么</h2>
+  <div class="card">
+    <ul class="note-list">
+      <li>是：对公开信息的整理和检索。企业官网、官方展会名录等公开来源写明的能力、价格状态，我们照实收录并给出原链接。</li>
+      <li>是：可核验。每条信息标注来源网址和核验日期，读者可以自己点开核对。</li>
+      <li>不是：供应商推荐。收录不代表认可，本站不对任何企业做背书，不评价质量，不写推荐结论。</li>
+      <li>不是：商业平台。本站不做撮合、不接客户数据、不收费用、不设账号系统。</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">数据是怎么整理的</h2>
+  <div class="card">
+    <p>只写公开网页能支持的内容，没有公开信息的字段留空或写「未发现」，不允许猜测。数据当前状态：</p>
+    <ul class="note-list mt-4">
+      <li><strong>示例数据（sample）</strong>：为演示页面效果放置的虚构卡片，已醒目标注，不代表任何真实企业。</li>
+      <li><strong>待核验（pending）</strong>：已录入待人工核对来源。</li>
+      <li><strong>已核验（verified）</strong>：来源链接与内容已由维护者核对。</li>
+    </ul>
+    <p class="mt-4">字段含义和录入规则见 <a href="data/README.md">数据说明</a>。校验脚本为 <code>tools/validate_data.py</code>，可直接运行检查数据。</p>
+  </div>
+
+  <h2 class="section-title">使用边界</h2>
+  <div class="card">
+    <ul class="note-list">
+      <li>本网站为纯静态页面，无后端、无登录、无用户表单，不收集任何访问者数据。</li>
+      <li>计算结果仅供日常参考，不构成工艺或质量建议；正式生产请按企业规范执行。</li>
+      <li>信息如有出入，以企业官网或官方渠道的最新内容为准。</li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>本站只整理公开信息，不对任何企业做背书或推荐。数据如有出入，以企业官网最新内容为准。</p>
+    <p>发酵产业公开信息地图 · 第一版 · 数据更新时间见目录页核验日期</p>
+  </div>
+</footer>
+
+</body>
+</html>

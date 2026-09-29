@@ -1,0 +1,39 @@
+[
+  {
+    "id": "sample-001",
+    "name": "示例数据·中试服务样例",
+    "city": "苏州",
+    "service_tags": ["中试"],
+    "public_capability": "本卡片为页面演示用的示例数据，内容为虚构，不代表任何真实企业。正式录入后，此处将展示企业官网公开的能力描述，例如可承接的发酵规模、设备配置或服务范围。",
+    "price_status": "not found",
+    "source_url": "https://example.com/sample-001",
+    "checked_at": "2026-09-29",
+    "confidence": "low",
+    "status": "sample"
+  },
+  {
+    "id": "sample-002",
+    "name": "示例数据·代工服务样例",
+    "city": "大连",
+    "service_tags": ["代工"],
+    "public_capability": "本卡片为页面演示用的示例数据，内容为虚构，不代表任何真实企业。正式录入后，此处将展示企业官网公开的代工能力描述，例如可代工的产品类型或生产资质。",
+    "price_status": "quote required",
+    "contact_url": "https://example.com/sample-002/contact",
+    "source_url": "https://example.com/sample-002",
+    "checked_at": "2026-09-29",
+    "confidence": "low",
+    "status": "sample"
+  },
+  {
+    "id": "sample-003",
+    "name": "示例数据·检测服务样例",
+    "city": "上海",
+    "service_tags": ["检测"],
+    "public_capability": "本卡片为页面演示用的示例数据，内容为虚构，不代表任何真实企业。正式录入后，此处将展示企业官网公开的检测能力描述，例如检测项目清单或资质认证。",
+    "price_status": "not found",
+    "source_url": "https://example.com/sample-003",
+    "checked_at": "2026-09-29",
+    "confidence": "low",
+    "status": "sample"
+  }
+]

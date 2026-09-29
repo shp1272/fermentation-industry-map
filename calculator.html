@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发酵计算器 · 发酵产业公开信息地图</title>
+<meta name="description" content="基础发酵计算器：接种量、稀释、配液三个计算功能，输入带单位，出错有提示。结果仅供参考。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%232F5D44' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%236B8A74' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%23C97F2D'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" aria-label="主导航">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="13.5" fill="none" stroke="#2F5D44" stroke-width="1.8"/>
+        <circle cx="16" cy="16" r="8" fill="none" stroke="#6B8A74" stroke-width="1.8"/>
+        <circle cx="16" cy="16" r="3.6" fill="#C97F2D"/>
+      </svg>
+      <span class="brand-name">发酵产业公开信息地图</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="directory.html">企业目录</a>
+      <a href="calculator.html" class="active">发酵计算器</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+
+  <h1 class="page-title">发酵计算器</h1>
+  <p class="page-sub">接种量、稀释、配液三个基础计算，输入带单位，出错会提示。结果仅供参考，请自行复核，正式生产按企业规范执行。</p>
+
+  <div class="calc-tabs" role="tablist">
+    <button type="button" class="calc-tab on" data-tab="inoc" role="tab" aria-selected="true">接种量</button>
+    <button type="button" class="calc-tab" data-tab="dilute" role="tab" aria-selected="false">稀释</button>
+    <button type="button" class="calc-tab" data-tab="prep" role="tab" aria-selected="false">配液</button>
+  </div>
+
+  <!-- 接种量 -->
+  <section class="calc-panel on" id="panel-inoc">
+    <p class="calc-desc">已知发酵液体积和接种比例，算需要准备多少接种液。</p>
+    <div class="form-row">
+      <label for="inocV">发酵液体积</label>
+      <div class="form-fields">
+        <div class="input-group">
+          <input type="number" id="inocV" step="any" min="0" placeholder="例如 50">
+          <select id="inocVUnit" aria-label="发酵液体积单位">
+            <option value="L">L</option>
+            <option value="mL">mL</option>
+          </select>
+        </div>
+        <p class="field-error" id="inocVErr"></p>
+      </div>
+    </div>
+    <div class="form-row">
+      <label for="inocR">接种比例</label>
+      <div class="form-fields">
+        <div class="input-group">
+          <input type="number" id="inocR" step="any" min="0" placeholder="例如 5">
+          <select id="inocRUnit" aria-label="接种比例单位">
+            <option value="pct">%（体积比）</option>
+          </select>
+        </div>
+        <p class="field-error" id="inocRErr"></p>
+      </div>
+    </div>
+    <button type="button" class="btn-calc" data-calc="inoc">计算接种液体积</button>
+    <div class="calc-result hidden" id="inocResult" role="status"></div>
+  </section>
+
+  <!-- 稀释 -->
+  <section class="calc-panel" id="panel-dilute">
+    <p class="calc-desc">已知母液浓度、目标浓度和目标体积，算取多少母液、补多少溶剂。两个浓度需使用相同单位。</p>
+    <div class="form-row">
+      <label for="dilC1">母液浓度 C₁</label>
+      <div class="form-fields">
+        <div class="input-group">
+          <input type="number" id="dilC1" step="any" min="0" placeholder="例如 100">
+          <select id="dilUnit" aria-label="浓度单位（两个浓度一致）">
+            <option value="g/L">g/L</option>
+            <option value="mg/mL">mg/mL</option>
+            <option value="pct">%（质量体积比）</option>
+            <option value="mol/L">mol/L</option>
+          </select>
+        </div>
+        <p class="field-error" id="dilC1Err"></p>
+      </div>
+    </div>
+    <div class="form-row">
+      <label for="dilC2">目标浓度 C₂</label>
+      <div class="form-fields">
+        <div class="input-group">
+          <input type="number" id="dilC2" step="any" min="0" placeholder="例如 10">
+          <select aria-label="目标浓度单位（与母液一致）" disabled>
+            <option>同母液单位</option>
+          </select>
+        </div>
+        <p class="field-error" id="dilC2Err"></p>
+      </div>
+    </div>
+    <div class="form-row">
+      <label for="dilV2">目标体积 V₂</label>
+      <div class="form-fields">
+        <div class="input-group">
+          <input type="number" id="dilV2" step="any" min="0" placeholder="例如 1">
+          <select id="dilV2Unit" aria-label="目标体积单位">
+            <option value="L">L</option>
+            <option value="mL">mL</option>
+          </select>
+        </div>
+        <p class="field-error" id="dilV2Err"></p>
+      </div>
+    </div>
+    <button type="button" class="btn-calc" data-calc="dilute">计算稀释方案</button>
+    <div class="calc-result hidden" id="dilResult" role="status"></div>
+  </section>
+
+  <!-- 配液 -->
+  <section class="calc-panel" id="panel-prep">
+    <p class="calc-desc">已知目标体积和目标浓度，算需要称多少溶质。</p>
+    <div class="form-row">
+      <label for="prepC">目标浓度</label>
+      <div class="form-fields">
+        <div class="input-group">
+          <input type="number" id="prepC" step="any" min="0" placeholder="例如 20">
+          <select id="prepCUnit" aria-label="浓度单位">
+            <option value="g/L">g/L</option>
+            <option value="mg/mL">mg/mL</option>
+            <option value="pct">%（质量体积比，g/100mL）</option>
+          </select>
+        </div>
+        <p class="field-error" id="prepCErr"></p>
+      </div>
+    </div>
+    <div class="form-row">
+      <label for="prepV">目标体积</label>
+      <div class="form-fields">
+        <div class="input-group">
+          <input type="number" id="prepV" step="any" min="0" placeholder="例如 500">
+          <select id="prepVUnit" aria-label="体积单位">
+            <option value="mL">mL</option>
+            <option value="L">L</option>
+          </select>
+        </div>
+        <p class="field-error" id="prepVErr"></p>
+      </div>
+    </div>
+    <button type="button" class="btn-calc" data-calc="prep">计算溶质用量</button>
+    <div class="calc-result hidden" id="prepResult" role="status"></div>
+  </section>
+
+  <h2 class="section-title">计算说明</h2>
+  <div class="card">
+    <ul class="note-list">
+      <li>接种量：接种液体积 = 发酵液体积 × 接种比例 ÷ 100。</li>
+      <li>稀释：取母液体积 = 目标浓度 × 目标体积 ÷ 母液浓度，补溶剂 = 目标体积 − 取母液体积。适用于同一套浓度单位。</li>
+      <li>配液：溶质质量 = 浓度 × 体积，按所选单位换算；%（质量体积比）指每 100 mL 溶液中含溶质的克数。</li>
+      <li>计算结果仅供参考，请自行复核；正式生产按企业工艺规范执行。</li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>本站只整理公开信息，不对任何企业做背书或推荐。计算结果仅供参考。</p>
+  </div>
+</footer>
+
+<script src="assets/calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>企业目录 · 发酵产业公开信息地图</title>
+<meta name="description" content="国内发酵相关中试、代工、检测服务公开信息目录，支持关键词和服务标签筛选。每条信息带来源链接和核验日期。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%232F5D44' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%236B8A74' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%23C97F2D'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" aria-label="主导航">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="13.5" fill="none" stroke="#2F5D44" stroke-width="1.8"/>
+        <circle cx="16" cy="16" r="8" fill="none" stroke="#6B8A74" stroke-width="1.8"/>
+        <circle cx="16" cy="16" r="3.6" fill="#C97F2D"/>
+      </svg>
+      <span class="brand-name">发酵产业公开信息地图</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="directory.html" class="active">企业目录</a>
+      <a href="calculator.html">发酵计算器</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+
+  <h1 class="page-title">企业目录</h1>
+  <p class="page-sub">收录国内发酵相关中试、代工、检测服务的公开信息。每张企业卡标出来源链接和核验日期，可自行点开核对。本站只整理公开信息，不做供应商背书。</p>
+
+  <div class="banner" role="note">
+    <div>
+      <strong>当前目录内均为示例数据</strong>
+      这些卡片用于演示页面效果，内容为虚构，不代表任何真实企业。待真实公开信息录入并核验后替换。
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <input type="search" id="keyword" placeholder="搜索企业名称、城市或能力描述" aria-label="关键词搜索">
+    <div class="tag-row" id="tagRow" role="group" aria-label="服务标签筛选"></div>
+  </div>
+
+  <p class="result-count" id="resultCount" role="status"></p>
+
+  <div class="company-list" id="companyList"></div>
+
+  <div class="empty-state hidden" id="emptyState">
+    <p>没有匹配的企业卡</p>
+    <p>换一个关键词，或点「全部」标签清除筛选试试。</p>
+  </div>
+
+  <div class="banner hidden" id="loadError" role="alert">
+    <div>
+      <strong>数据没有加载出来</strong>
+      直接用文件方式打开页面时，浏览器会阻止读取 JSON 数据。请用本地服务器预览（如 <code>python -m http.server</code>），或部署到 GitHub Pages 后访问，方法见 README.md。
+    </div>
+  </div>
+
+  <h2 class="section-title">本目录的使用边界</h2>
+  <div class="card">
+    <ul class="note-list">
+      <li>信息整理自企业官网、官方名录等公开来源，核验日期指最后一次打开来源核对的时间。</li>
+      <li>「价格状态」只描述公开页面上能否查到价格信息，不代表报价或成交条件，实际以企业报价为准。</li>
+      <li>收录不代表推荐。选定服务商前，请自行核实资质与口碑。</li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>本站只整理公开信息，不对任何企业做背书或推荐。数据如有出入，以企业官网最新内容为准。</p>
+  </div>
+</footer>
+
+<script src="assets/directory.js"></script>
+</body>
+</html>
